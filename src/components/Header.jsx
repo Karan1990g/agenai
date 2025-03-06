@@ -5,6 +5,7 @@ import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
+import { logo } from "../assets";
 
 const Header = () => {
   const pathname = useLocation();
@@ -41,7 +42,7 @@ const Header = () => {
         <div className="flex items-center">
           <a className="flex items-center text-2xl font-bold text-white xl:mr-4" href="/">
             <img
-              src="src/assets/4-small1-removebg-preview.png"
+              src={logo}
               alt="Logo"
               className="h-1/5 w-1/5 mr-2 object-contain"
             />
