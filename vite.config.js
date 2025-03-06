@@ -4,7 +4,12 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './',  // Ensures correct asset loading on Vercel
   build: {
-    outDir: 'dist', // Ensure the build output directory is 'dist'
+    outDir: 'dist',
+    assetsDir: 'assets',
   },
+  server: {
+    historyApiFallback: true, // Ensures proper routing in dev mode
+  }
 });
