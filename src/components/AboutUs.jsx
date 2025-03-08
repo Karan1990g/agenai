@@ -1,4 +1,4 @@
-import { SpeedInsights } from "@vercel/speed-insights/next" // Speed Insights
+import { SpeedInsights } from "@vercel/speed-insights/react";  // Vercel Speed Insights
 import React from 'react';
 import { curve, heroBackground, team_member01, team_member02 } from "../assets";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";

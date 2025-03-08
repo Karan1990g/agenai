@@ -1,4 +1,4 @@
-import { SpeedInsights } from "@vercel/speed-insights/next" // Speed Insights
+import { SpeedInsights } from "@vercel/speed-insights/react"; // Vercel SpeedInsights component
 import { curve, heroBackground, heroVideo, robot } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
