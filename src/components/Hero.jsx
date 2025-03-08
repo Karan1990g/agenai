@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next" // Speed Insights
 import { curve, heroBackground, heroVideo, robot } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
@@ -59,6 +60,7 @@ const Hero = () => {
                 muted
                 playsInline
               />
+              <SpeedInsights />
 
                 <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
