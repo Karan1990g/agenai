@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { navigation } from "../constants";
 import Button from "./Button";
@@ -9,6 +9,7 @@ import { logo } from "../assets";
 
 const Header = () => {
   const pathname = useLocation();
+  const navigate = useNavigate();
   const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
@@ -27,9 +28,23 @@ const Header = () => {
     setOpenNavigation(false);
   };
 
+  // Handle Walkthru.AI link click
+  const handleWalkthruAIClick = () => {
+    if (pathname.pathname === "/") {
+      // Scroll to the features section on the home page
+      const featuresSection = document.getElementById("features");
+      if (featuresSection) {
+        featuresSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Redirect to the home page
+      navigate("/");
+    }
+  };
+
   // Separate items: those with right: true will go to the right group
-  const centerNav = navigation.filter(item => !item.right);
-  const rightNav = navigation.filter(item => item.right);
+  const centerNav = navigation.filter((item) => !item.right);
+  const rightNav = navigation.filter((item) => item.right);
 
   return (
     <div
@@ -41,12 +56,7 @@ const Header = () => {
         {/* Logo (Left) */}
         <div className="flex items-center">
           <a className="flex items-center text-2xl font-bold text-white xl:mr-4" href="/">
-            <img
-              src={logo}
-              alt="Logo"
-              className="h-1/5 w-1/5 mr-2 object-contain"
-            />
-            
+            <img src={logo} alt="Logo" className="h-1/5 w-1/5 mr-2 object-contain" />
           </a>
         </div>
 
@@ -61,7 +71,7 @@ const Header = () => {
               <a
                 key={item.id}
                 href={item.url}
-                onClick={handleClick}
+                onClick={item.title === "Walkthru.AI" ? handleWalkthruAIClick : handleClick}
                 className={`block relative font-code text-2xl uppercase text-white transition-colors hover:text-blue-400 px-6 py-6 md:py-8 lg:text-sm lg:font-semibold ${
                   item.url === pathname.pathname ? "lg:text-white" : "lg:text-gray-400"
                 } lg:leading-5 lg:hover:text-white xl:px-12`}
