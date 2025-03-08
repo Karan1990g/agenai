@@ -82,6 +82,7 @@ import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
 import team_member01 from "./team/team_member01.jpg";
+import team_member02 from "./team/team_member02.jpg";
 
 export {
   brainwave,
@@ -155,4 +156,5 @@ export {
   telegram,
   twitter,
   team_member01,
+  team_member02,
 };
