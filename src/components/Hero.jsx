@@ -9,6 +9,7 @@ import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -40,8 +41,8 @@ const Hero = () => {
             Enhance user experiences with dynamic, AI-generated
             walkthroughs for your platform. With usage analytics and 24x7 active learning, build an amazing user experience.
           </p>
-          <Button href="/pricing" white>
-            Get started
+          <Button href="/index.html" white>
+            Get started 
           </Button>
         </div>
         <div className="relative w-full max-w-[90%] mx-auto md:max-w-5xl xl:mb-24">
