@@ -22,10 +22,13 @@ import loading from "./loading.png";
 import background from "./background.jpg";
 import logo from "./4-small1-removebg-preview.png"
 
+
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
 import heroBackground from "./hero/hero-background.jpg";
 import heroVideo from "./hero/Singlepage_product.mp4"
+
+
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
