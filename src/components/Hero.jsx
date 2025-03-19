@@ -41,7 +41,7 @@ const Hero = () => {
             Enhance user experiences with dynamic, AI-generated
             walkthroughs for your platform. With usage analytics and 24x7 active learning, build an amazing user experience.
           </p>
-          <Button href="/index.html" white>
+          <Button href="/index2.html" white>
             Get started 
           </Button>
         </div>

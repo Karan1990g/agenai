@@ -11,6 +11,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/',  // Ensures correct asset loading on Vercel
   plugins: [react()],
+  publicDir: 'public',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

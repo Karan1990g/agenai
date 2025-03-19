@@ -27,7 +27,7 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button href="/index.html">Get Started </Button>
+          <Button href="/index2.html">Get Started </Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
